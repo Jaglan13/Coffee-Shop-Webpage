@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heading Cards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px;
+            width: calc(33.33% - 40px);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        footer {
+            background-color: #333;
+            color: rgb(245, 241, 241);
+            padding: 20px 0;
+            text-align: center; /* Center-align text */
+            position: absolute; /* Position the footer absolutely */
+            bottom: 0; /* Stick to the bottom */
+            width: 100%; /* Full width */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Coffee Machine</h1>
+        </div>
+        <ul>
+            <li><a href="#"><a href="home.html">Home</a></a></li>
+            <li><a href="#"><a href="menu.html">Menu</a></a></li>
+            <li><a href="#"><a href="about.html">About</a></a></li>
+            <li><a href="#"><a href="contact.html">Contact</a></a></li>
+            <li><a href="#"><a href="login.html">Login</a></a></li>
+        </ul>
+    </nav>
+    <div class="background-image">
+        <img src="img/c8.jpg" alt="Coffee Background" style="width: 100%; height: 100%; object-fit: cover;">
+    </div>
+    <div class="container">
+        <div class="card">
+            <h2>About Us</h2>
+            <p>Welcome to our coffee shop! Learn more about our story and commitment to quality.</p>
+        </div>
+        <div class="card">
+            <h2>Our Coffee</h2>
+            <p>Discover our wide range of coffee varieties, carefully selected for their flavor and quality.</p>
+        </div>
+        <div class="card">
+            <h2>Taste Experience</h2>
+            <p>Experience the rich and complex flavors of our expertly crafted coffee beverages.</p>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Coffee Machine Inc.</p>
+    </footer>
+</body>
+</html>

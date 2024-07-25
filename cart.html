@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Machine</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        
+        
+        
+        nav {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        
+        nav ul li {
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 100px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        
+        
+        
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px 0;
+            text-align: center; /* Center-align text */
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <h1>Coffee Machine</h1>
+        </div>
+        <ul>
+            <li><a href="#"><a href="home.html">Home</a></a></li>
+            <li><a href="#"><a href="menu.html">Menu</a></a></li>
+            <li><a href="#"><a href="about.html">About</a></a></li>
+            <li><a href="#"><a href="contact.html">Contact</a></a></li>
+            <li><a href="#"><a href="login.html">Login</a></a></li>
+        </ul>
+      
+    </nav>
+   
+    <div class="container">
+        <h2>Your Cart</h2>
+        <!-- Cart items -->
+        <div class="cart-items">
+            <!-- Display cart items here using JavaScript -->
+        </div>
+    </div>
+
+        <!-- JavaScript -->
+    <!-- JavaScript -->
+    <script>
+        // JavaScript code to display cart items
+        var cartItems = JSON.parse(localStorage.getItem("cart"));
+        var cartHtml = "";
+        if (cartItems && cartItems.length > 0) {
+            cartItems.forEach(function(item) {
+                cartHtml += "<div class='product-card'>";
+                cartHtml += "<h2>" + item.name + "</h2>";
+                cartHtml += "<p>$" + item.price + "</p>";
+                cartHtml += "</div>";
+            });
+            document.querySelector(".cart-items").innerHTML = cartHtml;
+        } else {
+            document.querySelector(".cart-items").innerHTML = "<p>Your cart is empty.</p>";
+        }
+    </script>
+        
+        
+    
+    
+</body>
+</html>
